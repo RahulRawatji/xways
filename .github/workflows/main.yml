@@ -1,8 +1,10 @@
-build code:
-  name: Build Project
-  image: ubuntu:latest
-    script:
-          - echo "Building the project..."
-          - # Add your build commands here
-          - mkdir build
-          - echo "Build completed."
+name: first-action
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo 'Hello'
+      - name : Prinf Bye
+        run: echo 'Bye'
